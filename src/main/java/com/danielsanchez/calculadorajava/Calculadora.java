@@ -28,6 +28,14 @@ public class Calculadora {
                 break;
             
             // TODO: DEBES CREAR AQUÍ LOS CASES PARA LA OPERACIÓN DE LA POTENCIA Y EL MÓDULO.
+            case '^' :
+                // Operación división:
+                respuesta = Math.pow (numero1, numero2);
+                break;
+            case '%' :
+                // Operación división:
+                respuesta = numero1 % numero2;
+                break;    
                 
             default:
                 throw new IllegalArgumentException("Operación inválida.");
@@ -46,10 +54,11 @@ public class Calculadora {
         
         // Lectura de la operación a realizar
         // TODO: DEBES ADICIONAR EL SÍMBOLO DE ^ Y % PARA CALCULAR LA POTENCIA Y EL MÓDULO
-        System.out.println("Ingrese la operación (+, -, *, /)");
+        System.out.println("Ingrese la operación (+, -, *, /, ^ ,% )");
         char operacion = lector.next().charAt(0);
         
         double respuesta = calcular(numero1, numero2, operacion);
         System.out.println("La respuesta es " + respuesta);
     }
 }
+
